@@ -15,24 +15,19 @@ import org.hibernate.annotations.Cascade;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import io.swagger.annotations.ApiModelProperty;
 
 @Entity
 @Table(name = "user")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@ApiModelProperty(hidden = true)
 	private int userId;
 
-	@ApiModelProperty(example = "Tarun")
 	private String firstName;
 
-	@ApiModelProperty(example = "Chawla")
 	private String lastName;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@ApiModelProperty(hidden = true)
 	private List<Review> review;
 
 	public int getUserId() {

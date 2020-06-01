@@ -16,41 +16,31 @@ import org.hibernate.annotations.Cascade;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import io.swagger.annotations.ApiModelProperty;
 
 @Entity
 public class Hotel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@ApiModelProperty(hidden = true)
 	private int hotelId;
 
-	@ApiModelProperty(example = "Leela")
 	private String name;
 
-	@ApiModelProperty(example = "Bangalore")
 	private String city;
 
-	@ApiModelProperty(hidden = true)
 	private double averageRating;
 
-	@ApiModelProperty(example = "3")
 	private int noOfRooms;
 
-	@ApiModelProperty(example = "5")
 	private String star;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@ApiModelProperty(example = "[]")
 	private List<Room> room;
 
 	@ManyToMany(cascade = CascadeType.ALL)
-	@ApiModelProperty(example = "[]")
 	private List<User> user;
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@ApiModelProperty(example = "[]")
 	private List<Review> reviews;
 
 	@OneToOne(cascade = CascadeType.ALL)
