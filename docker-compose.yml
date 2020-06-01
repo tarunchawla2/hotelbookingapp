@@ -18,6 +18,6 @@ services:
    dockerfile: ./Dockerfile
   container_name: taruncnt
   ports:
-   - "80C:8080"
+   - "80:8080"
   links:
    - db
