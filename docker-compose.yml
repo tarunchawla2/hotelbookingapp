@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+ db:
+  build:
+   context: ./
+   dockerfile: ./db.Dockerfile
+  container_name: my_sql
+  environment:
+   MYSQL_ROOT_PASSWORD: root 
+  ports:
+   - "3036:3306"
+
+ web:
+  build:
+   context: ./
+   dockerfile: ./Dockerfile
+  container_name: taruncnt
+  ports:
+   - "8082:8080"
+  links:
+   - db
