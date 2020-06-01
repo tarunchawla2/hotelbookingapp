@@ -2,7 +2,9 @@
 
 ## Steps to run
 1. Assuming you have docker and docker-compose installed, simply run
-
+    ```
+    mvn clean install -DskipTests
+    ```
     ```
     sudo docker-compose up
     ```
