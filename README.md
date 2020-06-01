@@ -8,7 +8,7 @@
     ```
     sudo docker-compose up
     ```
-    The application will be running on port 80. 
+    The application will be running on port 80 in case you are running it with docker, else  8080.
     **_Note:_** If you don't want to run it using docker or if you want to run it locally in your IDE then, then before running it, make changes in application properties for your database URL.
 1. ## List  of Apis
     ## Model- Hotel
